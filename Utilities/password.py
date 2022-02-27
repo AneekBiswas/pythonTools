@@ -12,12 +12,10 @@ import random, string
 from time import *
 try :
     import pyperclip
-except: 
-    sleep(1)
-    print('Import Pyperclip To run Properly')
-    print('This Window will close after 5 seconds')
-    sleep(5)
-    quit()
+except:
+    import os
+    os.system('pip install pyperclip')
+    del os
 sleep(1)
 print('Import Complete')
 
