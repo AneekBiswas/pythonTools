@@ -118,4 +118,4 @@ else:
     if rematch == 'y':
         game = 'a'
     else:
-        print('Want to Play again')
+        do_again = input('Want to Play again?(y/n): ')
