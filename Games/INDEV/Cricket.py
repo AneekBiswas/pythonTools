@@ -13,6 +13,7 @@ def ball(game):
     elif game == 'c': balls = 120
     elif game == 'd': balls = 300
     elif game == 'e': balls = 540
+    else: balls = 120
     return balls
 def wicket(game):
     if game == 'a': wickets = 3
@@ -113,10 +114,8 @@ elif runs_2 > runs_1:
     if Ball_first == 'You': print('\nCongratulations! You won the Match by',iwicket - wickets_2,'wickets.')
     else: print('\nBetter luck next time! The Computer won the Match by',iwicket - wickets_2,'wickets.')
 else:
-    print('The Match is a Tie.','\nNo one Wins.\nWant a rematch?(y/n): ',end='')
-    rematch = input().lower
-    if rematch == 'y': continue
+    rematch = input('The Match is a Tie.','\nNo one Wins.\nWant a rematch?(y/n): ')
+    if rematch == 'y':
+        game = 'a'
     else:
-        print('')
-        
-    
+        print('Want to Play again')
