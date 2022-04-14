@@ -41,8 +41,7 @@ if random_toss == toss:
 elif random_toss != toss:
     u_result = 'l'
     print('\nYou lost the toss')
-    if random_opt == 1:
-        com_opt = 'bat'
+    if random_opt == 1:com_opt = 'bat'
     else: com_opt = 'ball'
 
 if u_result == 'w':
@@ -81,10 +80,8 @@ while True:
                 else: runs_1 += c_choice
             print('\nScore =',runs_1,'/',wickets_1,'\nBalls remaining: ', balls_1)
             balls_1 -= 1
-            if balls_1%6 == 0 and game != 'b':
-                input('End of Over. Press Enter/Return to continue')
-            elif balls_1%6 == 4 and game == 'b':
-                input('End of Over. Press Enter/Return to continue')
+            if balls_1%6 == 0 and game != 'b':input('End of Over. Press Enter/Return to continue')
+            elif balls_1%6 == 4 and game == 'b':input('End of Over. Press Enter/Return to continue')
     print('\n---------- End of Inning ----------')
     input('\nFinal Score: \nRuns =',runs_1, '\nwickets =',iwicket-wickets_1,'\n',Ball_first,'needs',runs_1 + 1,'runs to win.\n','Press Enter/Return to begin Second Inning')
     # Second Inning 
@@ -102,14 +99,11 @@ while True:
             else:
                 if Ball_first == 'You': runs_2 += u_choice
                 else: runs_2 += c_choice
-            if game != 'e':
-                print('\nScore =',runs_2,'/',wickets_2,'\nTo win:',runs_1 - runs_2 + 1,'runs needed from',iball - balls_2,'balls.')
+            if game != 'e':print('\nScore =',runs_2,'/',wickets_2,'\nTo win:',runs_1 - runs_2 + 1,'runs needed from',iball - balls_2,'balls.')
             else: print('\nScore =',runs_2,'/',wickets_2,)
             balls_2 -= 1
-            if balls_2%6 == 0 and game != 'b':
-                input('End of Over. Press Enter/Return to continue')
-            elif balls_2%6==4 and game == 'b':
-                input('End of Over. Press Enter/Return to continue')
+            if balls_2%6 == 0 and game != 'b':input('End of Over. Press Enter/Return to continue')
+            elif balls_2%6==4 and game == 'b':input('End of Over. Press Enter/Return to continue')
             if game == 'e':
                 #Third Inning begins
                 print('\n---------- Third Inning Begins ----------')
@@ -129,9 +123,9 @@ while True:
                         if balls_3%6 == 0:
                             input('End of Over. Press Enter/Return to Continue')
                     if runs_2 > runs_1:
-                        input('\n---------- End of Inning ----------','\nFinal Score',runs_1, '\nwickets =',iwicket-wickets_1)
+                        input('\n---------- End of Inning ----------','\nFinal Score\n','Runs :', runs_1, '\nwickets:',iwicket-wickets_3)
                         break
-                    else: input('\n---------- End of Inning ----------','\nFinal Score',runs_1, '\nwickets =',iwicket-wickets_1,'\n',Ball_first,'needs',(runs_1 + 1 - runs_2),'runs to win.\n','Press Enter/Return to begin Fourth Inning')
+                    else: input('\n---------- End of Inning ----------','\nFinal Score\n','Runs:', runs_1, '\nwickets: ',iwicket-wickets_3,'\n',Ball_first,'needs',(runs_1 + 1 - runs_2),'runs to win.\n','Press Enter/Return to begin Fourth Inning')
                 print('\n---------- Fourth Inning Begins ----------')
                 wickets_4 = wicket(game)
                 balls_4 = ball(game)
@@ -147,9 +141,9 @@ while True:
                             else: runs_2 += c_choice
                         balls_4 -= 1
                         if balls_4%6==0: input('End of Over. Press Enter/Return to Continue')
-
-
-    input('\n---------- End of Inning ----------','\nFinal Score:\n','Runs =',runs_2,'\nwickets =',wickets_2,'\nPress Enter/Return to view results')
+                input('\n---------- End of Inning ----------','\nFinal Score\n','Runs: ', runs_2, '\nwickets =',iwicket-wickets_4)
+                break
+    if game != 'e':input('\n---------- End of Inning ----------','\nFinal Score:\n','Runs =',runs_2,'\nwickets =',wickets_2,'\nPress Enter/Return to view results')
     # Result of Match 
     print('\n~~~~~~~~~~ Result ~~~~~~~~~~')
     if runs_1 > runs_2:    
