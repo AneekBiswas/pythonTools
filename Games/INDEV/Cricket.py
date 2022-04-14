@@ -113,7 +113,7 @@ while True:
             if balls_2%6 == 0 and game != 'b':
                 print('End of Over. Press Enter/Return to continue')
                 input()
-            if balls_2%6==4 and game == 'b':
+            elif balls_2%6==4 and game == 'b':
                 print('End of Over. Press Enter/Return to continue')
                 input()
             if game == 'e':
@@ -131,8 +131,11 @@ while True:
                         else:
                             if Bat_first == 'You': runs_1 += u_choice
                             else: runs_1 += c_choice
-                        
-                
+                        balls_3 -= 1
+                        if balls_3%6 == 0:
+                            print('End of Over. Press Enter/Return to Continue')
+                            input()
+                    
     print('\n---------- End of Inning ----------','\nFinal Score:\n','Runs =',runs_2,'\nwickets =',wickets_2,'\nPress Enter/Return to view results'), input() 
     # Result of Match 
     print('\n~~~~~~~~~~ Result ~~~~~~~~~~')
