@@ -7,7 +7,7 @@ input()
 print('\n---------- Choose Game -----------')
 game = input('Enter Game(a,b,c,d,e): ').lower
 #get the number of balls and wickets
-def ball(game):
+def ball(game):# to get the number of balls
     if game == 'a': balls = 6
     elif game == 'b': balls = 100
     elif game == 'c': balls = 120
@@ -15,7 +15,7 @@ def ball(game):
     elif game == 'e': balls = 540
     else: balls = 120
     return balls
-def wicket(game):
+def wicket(game):#to get the number of wickets
     if game == 'a': wickets = 3
     else: wickets = 10
     return wickets
@@ -113,9 +113,13 @@ if runs_1 > runs_2:
 elif runs_2 > runs_1:
     if Ball_first == 'You': print('\nCongratulations! You won the Match by',iwicket - wickets_2,'wickets.')
     else: print('\nBetter luck next time! The Computer won the Match by',iwicket - wickets_2,'wickets.')
+        
 else:
-    rematch = input('The Match is a Tie.','\nNo one Wins.\nWant a rematch?(y/n): ')
-    if rematch == 'y':
+    tiebreaker = input('The Match is a Tie.','\nNo one Wins.\nWant a tie breaker?(y/n): ')
+    if tiebreaker == 'y':
         game = 'a'
+        continue
     else:
-        do_again = input('Want to Play again?(y/n): ')
+        rematch = input('Want a rematch?(y/n): ')
+        if rematch == 'y' : continue
+        else: quit()
