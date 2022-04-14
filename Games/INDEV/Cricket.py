@@ -120,8 +120,7 @@ while True:
                             if Bat_first == 'You': runs_1 += u_choice
                             else: runs_1 += c_choice
                         balls_3 -= 1
-                        if balls_3%6 == 0:
-                            input('End of Over. Press Enter/Return to Continue')
+                        if balls_3%6 == 0:input('End of Over. Press Enter/Return to Continue')
                     if runs_2 > runs_1:
                         input('\n---------- End of Inning ----------','\nFinal Score\n','Runs :', runs_1, '\nwickets:',iwicket-wickets_3)
                         break
